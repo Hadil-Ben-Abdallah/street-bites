@@ -138,9 +138,9 @@ This project is licensed under the [MIT License](LICENSE).
 
 If you like this project:
 
-⭐️ Star the repo
-🤍 Sponsor the project
-🔁 Share it with others
-🛠️ Fork it and build your version!
+⭐️ Star the repository   
+🤍 Sponsor the project   
+🔁 Share it with others   
+🛠️ Fork it and build your own version!
 
 <h6 align="center">Made with 💙 By Hadil Ben Abdallah</h6>
