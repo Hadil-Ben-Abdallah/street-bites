@@ -1,4 +1,4 @@
-# <h1 align="center">🌮 STREET BITES — International Street Food Festival</h1>
+# <h1 align="center">🌮 STREET BITES: International Street Food Festival</h1>
 
 An interactive website for a fictional international street food festival, bringing together food discovery, vendor exploration, and live event scheduling in one experience. Built with React, TypeScript, and gp-grid, this project combines a modern festival-inspired interface with interactive data grids and practical features across three data-driven pages.
 
