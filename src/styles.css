@@ -1,0 +1,226 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: "Bowlby One", "Arial Black", sans-serif;
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chili: var(--chili);
+  --color-cobalt: var(--cobalt);
+  --color-lavender: var(--lavender);
+  --color-blush: var(--blush);
+  --color-sun: var(--sun);
+  --color-ink: var(--ink);
+  --color-sky: var(--sky);
+  --color-mint: var(--mint);
+  --shadow-card: 0 18px 40px -22px color-mix(in oklab, var(--primary) 45%, transparent);
+  --shadow-pop: 4px 4px 0 0 var(--primary);
+}
+
+:root {
+  --radius: 1rem;
+  --background: oklch(0.988 0.006 20);       /* #FFF9F8 */
+  --foreground: oklch(0.27 0.04 315);         /* #30233B */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.27 0.04 315);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.27 0.04 315);
+  --primary: oklch(0.34 0.13 300);            /* #452078 */
+  --primary-foreground: oklch(0.988 0.006 20);
+  --secondary: oklch(0.9 0.045 315);          /* #E9D5F5 */
+  --secondary-foreground: oklch(0.34 0.13 300);
+  --muted: oklch(0.955 0.015 330);
+  --muted-foreground: oklch(0.48 0.04 315);
+  --accent: oklch(0.92 0.05 340);             /* #F8DDF0 */
+  --accent-foreground: oklch(0.34 0.13 300);
+  --destructive: oklch(0.63 0.21 27);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.9 0.025 320);
+  --input: oklch(0.9 0.025 320);
+  --ring: oklch(0.42 0.17 268);
+  --chili: oklch(0.63 0.21 27);               /* #F04438 */
+  --cobalt: oklch(0.45 0.18 268);             /* #3449B8 */
+  --lavender: oklch(0.9 0.045 315);
+  --blush: oklch(0.92 0.05 340);
+  --sun: oklch(0.89 0.15 88);                 /* #FFD75E */
+  --ink: oklch(0.27 0.04 315);
+  --sky: oklch(0.88 0.06 240);
+  --mint: oklch(0.88 0.09 160);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Custom default cursor everywhere */
+*,
+*::before,
+*::after {
+  cursor: url('/cursors/SweezyCursor.png'), auto !important;
+}
+
+/* Custom pointer for interactive elements */
+a,
+button,
+select,
+[role="button"],
+[role="menuitem"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.clickable {
+  cursor: url('/cursors/SweezyPointer.png'), pointer !important;
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+@utility sticker {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 1.25rem;
+  padding: 0.1em 0.35em;
+}
+
+@utility dotted-rule {
+  border-top: 2px dotted color-mix(in oklab, var(--primary) 50%, transparent);
+}
+
+/* Overlapping white info panel on image cards (reference style) */
+@utility info-panel {
+  background: var(--card);
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
+}
+
+/* ---- gp-grid festival skin (via gp-grid CSS variables) ---- */
+.festival-grid .gp-grid-container {
+  font-family: var(--font-sans);
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+.festival-grid .gp-grid-container:not(.gp-grid-container--dark) {
+  --gp-grid-bg: var(--card);
+  --gp-grid-bg-alt: var(--background);
+  --gp-grid-text: var(--ink);
+  --gp-grid-border: var(--border);
+  --gp-grid-border-light: var(--muted);
+  --gp-grid-header-bg: var(--secondary);
+  --gp-grid-header-text: var(--primary);
+  --gp-grid-primary: var(--cobalt);
+  --gp-grid-primary-light: var(--blush);
+  --gp-grid-hover: var(--muted);
+}
+.festival-grid .gp-grid-header-cell {
+  font-weight: 800;
+}
+/* Dark grid: plain text (prices, ratings, numbers) follows the grid's light text color */
+.festival-grid .gp-grid-container--dark .gp-grid-cell .text-ink:not(.grid-badge) {
+  color: inherit;
+}
+.festival-grid .gp-grid-container--dark .gp-grid-cell .text-primary:not(.grid-badge) {
+  color: var(--lavender);
+}
+
+/* Text selection in brand colors */
+::selection {
+  background: var(--sun);
+  color: var(--primary);
+}
+
+/* Scrollbars in brand colors (page and grids) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--secondary);
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 999px;
+  border: 2px solid var(--secondary);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--chili);
+}
+.gp-grid-container--dark,
+.gp-grid-container--dark * {
+  scrollbar-color: var(--lavender) oklch(0.25 0.03 300);
+}
+
+.grid-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+@keyframes live-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+.live-dot {
+  animation: live-pulse 1.4s ease-in-out infinite;
+}
+@keyframes row-flash {
+  from { background: var(--sun); }
+  to { background: transparent; }
+}
+.flash {
+  animation: row-flash 1.6s ease-out;
+}
