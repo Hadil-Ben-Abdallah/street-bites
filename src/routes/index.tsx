@@ -48,7 +48,7 @@ function Home() {
             Three days of independent street food from 15 countries — takoyaki to brik, birria to bánh mì — with chefs, competitions and live music by the river.
           </p>
           <div className="mt-6 flex flex-wrap gap-4 text-sm font-bold text-primary">
-            <span className="flex items-center gap-2"><CalendarDays className="h-4 w-4 text-chili" />12–14 June 2026</span>
+            <span className="flex items-center gap-2"><CalendarDays className="h-4 w-4 text-chili" />12–14 June 2027</span>
             <span className="flex items-center gap-2"><MapPin className="h-4 w-4 text-chili" />Riverside Park, Old Harbour</span>
           </div>
           <div className="mt-8 flex flex-wrap gap-3">

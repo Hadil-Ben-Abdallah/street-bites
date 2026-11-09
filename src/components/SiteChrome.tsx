@@ -63,7 +63,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-[1.4fr_1fr_1.4fr]">
         <div>
           <div className="font-display text-5xl text-sun">Street Bites</div>
-          <p className="mt-3 max-w-sm text-primary-foreground/80">A world of flavor. One incredible festival. 12–14 June 2026 · Riverside Park, Old Harbour.</p>
+          <p className="mt-3 max-w-sm text-primary-foreground/80">A world of flavor. One incredible festival. 12–14 June 2027 · Riverside Park, Old Harbour.</p>
         <div className="mt-5 flex gap-3">
   {[
     { icon: Github, url: "https://github.com/Hadil-Ben-Abdallah", label: "GitHub" },
