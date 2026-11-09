@@ -45,7 +45,7 @@ function Home() {
           </h1>
           <p className="mt-8 font-display text-3xl text-primary md:text-4xl">One city. A thousand flavors.</p>
           <p className="mt-4 max-w-md text-lg text-ink/80">
-            Three days of independent street food from 15 countries — takoyaki to brik, birria to bánh mì — with chefs, competitions and live music by the river.
+            Three days of independent street food from 15 countries, takoyaki to brik, birria to bánh mì, with chefs, competitions and live music by the river.
           </p>
           <div className="mt-6 flex flex-wrap gap-4 text-sm font-bold text-primary">
             <span className="flex items-center gap-2"><CalendarDays className="h-4 w-4 text-chili" />12–14 June 2027</span>

@@ -71,7 +71,7 @@ function FoodPage() {
   return (
     <>
       <PageHero eyebrow="Food explorer" title="Find your next favorite" accent="bite" img={IMG.padkrapao}>
-        <p>Every dish at the festival in one place. Filter by diet, price or spice — then line up a few to compare.</p>
+        <p>Every dish at the festival in one place. Filter by diet, price or spice, then line up a few to compare.</p>
         <div className="mt-6"><SearchBox value={q} onChange={setQ} placeholder="Search dishes, ingredients, vendors…" /></div>
       </PageHero>
 
