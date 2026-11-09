@@ -30,9 +30,9 @@ An interactive website for a fictional international street food festival, bring
 ![Tech Stack](https://skillicons.dev/icons?i=react,typescript,vite,tailwind)
 
 **Core Libraries:**
-- [gp-grid](https://gp-grid.io/) — Interactive data grids
-- [TanStack Router](https://tanstack.com/router) — Application routing
-- [Lucide React](https://lucide.dev/) — Icons
+- [gp-grid](https://gp-grid.io/): Interactive data grids
+- [TanStack Router](https://tanstack.com/router): Application routing
+- [Lucide React](https://lucide.dev/): Icons
 
 ---
 
